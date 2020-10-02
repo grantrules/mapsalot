@@ -1,0 +1,75 @@
+{
+  "name": "mapsalot",
+  "version": "1.0.0",
+  "description": "Mapping tool for Uptick",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grantbrokergenius/mapsalot.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npx babel-node src/index.js",
+    "debug": "BABEL_ENV=debug npx babel-node --inspect src/index.js",
+    "serve": "node dist/index.js",
+    "test": "jest",
+    "build": "npx babel src -x .js -d dist && npx webpack",
+    "dev": "npx webpack --config webpack.config.dev.js"
+  },
+  "keywords": [],
+  "author": "grant.harding@brokergenius.com",
+  "license": "ISC",
+  "dependencies": {
+    "@date-io/core": "^1.3.9",
+    "@date-io/date-fns": "^1.3.9",
+    "@material-ui/core": "^4.4.0",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/pickers": "^3.2.4",
+    "date-fns": "^2.0.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "express-session": "^1.16.2",
+    "graphql": "^14.4.2",
+    "graphql-hooks": "^3.6.1",
+    "knex": "^0.19.1",
+    "mysql": "^2.17.1",
+    "node-fetch": "^2.6.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "session-file-store": "^1.3.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.6.1",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-imports": "^2.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^24.9.0",
+    "jest-environment-enzyme": "^7.1.1",
+    "jest-enzyme": "^7.1.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-enzyme"
+    ],
+    "testEnvironment": "enzyme"
+  }
+}
